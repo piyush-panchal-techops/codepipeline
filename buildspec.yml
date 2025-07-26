@@ -11,5 +11,5 @@ phases:
 artifacts:
   name: TerraformPlan
   files:
-  - "Terraform.tfstate*"
+  - "*state*"
 
