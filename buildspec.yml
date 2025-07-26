@@ -12,3 +12,4 @@ artifacts:
   name: TerraformPlan
   files:
   - "Terraform.tfstate*"
+
