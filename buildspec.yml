@@ -1,0 +1,15 @@
+version: 0.2
+phases:
+  install:
+    commands:
+    - curl -s https://releases.hashicorp.com/Terraform/1.3.6/Terraform_1.3.6_linux_amd64.zip -o Terraform.zip
+    - unzip Terraform.zip -d /usr/local/bin
+    - chmod 755 /usr/local/bin/Terraform
+  build:
+    commands:
+    - Terraform init
+    - Terraform apply --auto-approve
+artifacts:
+  name: TerraformPlan
+  files:
+  - "Terraform.tfstate*"
